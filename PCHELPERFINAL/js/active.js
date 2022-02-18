@@ -202,3 +202,37 @@
       });
 
 })(jQuery);
+$(document).ready(function() {
+
+  var audio  = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/click.mp3');
+  var audio2 = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3')
+
+  $(".button").mousedown(function() {
+    audio2.load();
+    audio2.play();
+  });
+
+  $(".button").mouseup(function() {
+    audio.load();
+    audio.play();
+  });
+  function darkmode() {
+  const wasDarkmode = localStorage.getItem('darkmode') === 'true';
+  localStorage.setItem('darkmode', !wasDarkmode);
+  const element = document.body;
+  element.classList.toggle('dark-mode', !wasDarkmode);
+}
+
+function onload() {
+  document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
+}
+});
+
+
+
+
+const htmlEl = document.getElementsByTagName('html')[0];
+
+const toggleTheme = (theme) => {
+    htmlEl.dataset.theme = theme;
+}

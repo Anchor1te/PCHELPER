@@ -1570,3 +1570,44 @@ img {
     line-height: 2;
     color: #9f9f9f;
 }
+
+.button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  width: 185px;
+  line-height: 65px;
+  cursor: pointer;
+  font-size: 22px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: black;
+  border-radius: 10px;
+  border-bottom: 4px solid white;
+  box-shadow: 6px 6px 6px gray;
+  user-select: none;
+  background: white;
+  transition: background 0.05s linear;
+  transition: all .05s linear;
+}
+
+.button:active {
+
+  border-bottom: 1px solid gray;
+  transform: translateY(3px);
+}
+
+
+
+
+html[data-theme='dark'] {
+    background: #000;
+    filter: invert(1) hue-rotate(180deg)
+}
+
+html[data-theme='dark'] img {
+  filter: invert(1) hue-rotate(180deg)
+}
